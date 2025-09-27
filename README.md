@@ -1,4 +1,4 @@
-# aoc-2024
+# aoc again
 
 [![Release](https://img.shields.io/github/v/release/vlnn/aoc-2024)](https://img.shields.io/github/v/release/vlnn/aoc-2024)
 [![Build status](https://img.shields.io/github/actions/workflow/status/vlnn/aoc-2024/main.yml?branch=main)](https://github.com/vlnn/aoc-2024/actions/workflows/main.yml?query=branch%3Amain)
@@ -8,8 +8,8 @@
 
 Solving AOC again with new tooling
 
-- **Github repository**: <https://github.com/vlnn/aoc-2024/>
-- **Documentation** <https://vlnn.github.io/aoc-2024/>
+- **Github repository**: <https://github.com/vlnn/aoc/>
+- **Documentation** <https://vlnn.github.io/aoc/>
 
 ## Getting started with your project
 
