@@ -24,11 +24,11 @@ lint:
 	uv run ruff check src tests
 
 check: lint
-	uv run pre-commit run --all-files
+	uv run python -m pre_commit run --all-files
+
 
 coverage:
 	uv run python -m pytest --cov --cov-report=term-missing
 
 type-check:
 	uv run ty check
-
