@@ -2,9 +2,6 @@ from aoc.io import read_input
 
 
 def parse_input(raw_input: str) -> list[tuple[int, int]]:
-    if not raw_input:
-        return []
-
     lines = raw_input.strip().split("\n")
     return [parse_line(line) for line in lines]
 
@@ -38,9 +35,6 @@ def similarity_score(numbers: list[int], frequencies: dict[int, int]) -> int:
 
 
 def solve_part1(pairs: list[tuple[int, int]]) -> int:
-    if not pairs:
-        return 0
-
     left = sorted(extract_column(pairs, 0))
     right = sorted(extract_column(pairs, 1))
 
@@ -48,9 +42,6 @@ def solve_part1(pairs: list[tuple[int, int]]) -> int:
 
 
 def solve_part2(pairs: list[tuple[int, int]]) -> int:
-    if not pairs:
-        return 0
-
     left = extract_column(pairs, 0)
     right = extract_column(pairs, 1)
 
