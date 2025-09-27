@@ -1,6 +1,6 @@
 import importlib
 import sys
-from typing import Callable
+from typing import Callable, cast
 
 from aoc.discovery import find_available_days, find_latest_year
 
@@ -10,8 +10,9 @@ def import_solution(year: int, day: int) -> tuple[Callable, Callable] | None:
         module = importlib.import_module(f"aoc.year_{year}.day_{day:02d}")
     except (ImportError, AttributeError):
         return None
-    else:
-        return module.part1, module.part2
+    if not (hasattr(module, "part1") and hasattr(module, "part2")):
+        return None
+    return cast(Callable, module.part1), cast(Callable, module.part2)
 
 
 def run_solution(year: int, day: int) -> None:
@@ -59,7 +60,8 @@ def main() -> None:
         if latest_year is None:
             print("No solutions found")
             sys.exit(1)
-        run_all_solutions(latest_year)
+        else:
+            run_all_solutions(latest_year)
     elif args.day is None:
         run_all_solutions(args.year)
     else:
@@ -67,10 +69,10 @@ def main() -> None:
         if not solution:
             print(f"Solution for Year {args.year}, Day {args.day} not found")
             sys.exit(1)
-
-        part1, part2 = solution
-        print(f"Part 1: {part1()}")
-        print(f"Part 2: {part2()}")
+        else:
+            part1, part2 = solution
+            print(f"Part 1: {part1()}")
+            print(f"Part 2: {part2()}")
 
 
 if __name__ == "__main__":
