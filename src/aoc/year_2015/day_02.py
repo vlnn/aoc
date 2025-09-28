@@ -20,8 +20,13 @@ def solve_part1(xyzs) -> int:
     return sum(areas)
 
 
-def solve_part2(xyz) -> int:
-    return 0
+def solve_part2(xyzs) -> int:
+    lengths = [(2 * (x + y), 2 * (y + z), 2 * (x + z)) for x, y, z in xyzs]
+    bows = [x * y * z for x, y, z in xyzs]
+    lengths_and_bows = zip(lengths, bows)
+    full_lengths = [min(ls) + b for ls, b in lengths_and_bows]
+
+    return sum(full_lengths)
 
 
 def part1() -> int:
@@ -29,4 +34,4 @@ def part1() -> int:
 
 
 def part2() -> int | None:
-    return solve_part2(raw_input)
+    return solve_part2(parse_input(raw_input))
