@@ -1,6 +1,7 @@
 import importlib
 import sys
-from typing import Callable, cast
+from collections.abc import Callable
+from typing import cast
 
 from aoc.discovery import find_available_days, find_latest_year
 

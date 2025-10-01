@@ -21,7 +21,7 @@ def solve_part1(xyzs) -> int:
 def solve_part2(xyzs) -> int:
     lengths = [(2 * (x + y), 2 * (y + z), 2 * (x + z)) for x, y, z in xyzs]
     bows = [x * y * z for x, y, z in xyzs]
-    lengths_and_bows = zip(lengths, bows)
+    lengths_and_bows = zip(lengths, bows, strict=True)
     full_lengths = [min(ls) + b for ls, b in lengths_and_bows]
 
     return sum(full_lengths)

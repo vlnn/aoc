@@ -20,7 +20,7 @@ def calculate_distance(a: int, b: int) -> int:
 
 
 def total_distance(list1: list[int], list2: list[int]) -> int:
-    return sum(calculate_distance(a, b) for a, b in zip(list1, list2))
+    return sum(calculate_distance(a, b) for a, b in zip(list1, list2, strict=True))
 
 
 def count_frequencies(numbers: list[int]) -> dict[int, int]:
