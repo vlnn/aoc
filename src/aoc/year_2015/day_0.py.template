@@ -14,5 +14,3 @@ def part1() -> int:
 
 def part2() -> int | None:
     return solve_part2(raw_input)
-
-
