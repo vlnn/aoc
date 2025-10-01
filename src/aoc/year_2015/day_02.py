@@ -1,6 +1,4 @@
 from aoc.io import read_input
-from itertools import accumulate
-
 
 raw_input = read_input(2015, 2)
 

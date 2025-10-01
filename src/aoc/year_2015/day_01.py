@@ -1,5 +1,6 @@
-from aoc.io import read_input
 from itertools import accumulate
+
+from aoc.io import read_input
 
 
 def solve_part1(directions) -> int:
