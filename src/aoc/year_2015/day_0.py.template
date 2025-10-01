@@ -1,0 +1,18 @@
+from aoc.io import read_input
+
+raw_input = read_input(2000, 0)
+
+def solve_part1() -> int:
+    pass
+
+def solve_part1() -> int:
+    pass
+
+def part1() -> int:
+    return solve_part1(raw_input)
+
+
+def part2() -> int | None:
+    return solve_part2(raw_input)
+
+
