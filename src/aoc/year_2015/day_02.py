@@ -11,7 +11,7 @@ def parse_input(raw_data: str) -> list[tuple[int, int, int]]:
 
 
 def parse_line(line: str) -> tuple[int, int, int]:
-    return [int(x) for x in line.split("x")]
+    return tuple(int(x) for x in line.split("x"))
 
 
 def solve_part1(xyzs) -> int:
