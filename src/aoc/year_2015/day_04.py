@@ -6,7 +6,6 @@ raw_input = read_input(2015, 4)
 
 def check_lead_md5(i, r, n):
     addr = i + str(r)
-    print(addr)
     return hashlib.md5(addr.encode()).hexdigest()[:n] == "0" * n
 
 
