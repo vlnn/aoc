@@ -1,13 +1,13 @@
-from aoc.io import read_input
 import re
-from typing import List
+
+from aoc.io import read_input
 
 raw_input = read_input(2015, 5)
 vowels = "aeiou"
 forbidden = ["ab", "cd", "pq", "xy"]
 
 
-def read_lines(raw_data: str) -> str:
+def read_lines(raw_data: str) -> list[str]:
     lines = raw_data.strip().split("\n")
     return lines
 
